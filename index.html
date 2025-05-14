@@ -91,7 +91,26 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+
+    .sakura {
+    position: fixed;
+    top: -10px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
 </head>
 <body>
   <div class="card">
@@ -113,5 +132,23 @@
       </a>
     </div>
   </div>
+  <script>
+  function createSakuraPetal() {
+    const petal = document.createElement("img");
+    petal.src = "https://cdn-icons-png.flaticon.com/128/7654/7654296.png";
+    petal.className = "sakura";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = 5 + Math.random() * 5 + "s";
+    petal.style.width = 20 + Math.random() * 10 + "px";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+      petal.remove();
+    }, 10000);
+  }
+
+  setInterval(createSakuraPetal, 500);
+</script>
 </body>
 </html>
