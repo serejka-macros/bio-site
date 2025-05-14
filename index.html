@@ -91,6 +91,25 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    
+    .music-button {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #ff90e8;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.music-button:hover {
+  background: #f06292;
+  transform: scale(1.05);
+}
 
     .sakura {
     position: fixed;
@@ -131,9 +150,9 @@
         <img src="realestate-preview.jpg" alt="Проект аренды квартир">
       </a>
     </div>
-  </div>
-  <button id="music-btn">🎵 Включить музыку</button>
+  <button id="music-btn" class="music-button">🎵 Включить музыку</button>
   <audio id="bg-music" src="background.mp3" loop></audio>
+  </div>
   <script>
   function createSakuraPetal() {
     const petal = document.createElement("img");
