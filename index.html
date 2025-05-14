@@ -132,6 +132,8 @@
       </a>
     </div>
   </div>
+  <button id="music-btn">🎵 Включить музыку</button>
+  <audio id="bg-music" src="background.mp3" loop></audio>
   <script>
   function createSakuraPetal() {
     const petal = document.createElement("img");
@@ -150,5 +152,21 @@
 
   setInterval(createSakuraPetal, 500);
 </script>
+  <script>
+    const musicBtn = document.getElementById("music-btn");
+    const music = document.getElementById("bg-music");
+    let isPlaying = false;
+
+    musicBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        music.pause();
+        musicBtn.textContent = "🎵 Включить музыку";
+      } else {
+        music.play();
+        musicBtn.textContent = "🔇 Выключить музыку";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
 </body>
 </html>
