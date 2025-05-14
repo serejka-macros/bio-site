@@ -14,6 +14,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .card {
@@ -22,7 +23,7 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
-      width: 90%;
+      width: 100%;
       max-width: 400px;
       animation: fadeIn 1s ease-in-out;
     }
@@ -63,6 +64,29 @@
       transform: scale(1.05);
     }
 
+    .projects {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .projects h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.8rem;
+    }
+
+    .projects img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .projects img:hover {
+      transform: scale(1.03);
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -74,10 +98,18 @@
     <img src="avatar.jpg" alt="Avatar" class="avatar">
     <h1>macros</h1>
     <p>🌸 котик, код, вайб</p>
+
     <div class="links">
-      <a href="https://t.me/@Serejka_macros" target="_blank">📨 Telegram</a>
+      <a href="https://t.me/Serejka_macros" target="_blank">📨 Telegram</a>
       <a href="https://github.com/serejka-macros" target="_blank">💻 GitHub</a>
       <a href="https://steamcommunity.com/id/serejka_macros/" target="_blank">🌊 Steam</a>
+    </div>
+
+    <div class="projects">
+      <h2>Мои проекты</h2>
+      <a href="https://myrealestate.great-site.net" target="_blank">
+        <img src="realestate-preview.jpg" alt="Проект аренды квартир">
+      </a>
     </div>
   </div>
 </body>
