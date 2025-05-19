@@ -173,6 +173,29 @@
       transform: translateY(0);
     }
 
+	.japanese-neon {
+  color: #111;
+  font-weight: bold;
+  text-transform: lowerupper;
+  text-shadow:
+    0 0 5px #ff66cc,
+    0 0 10px #ff66cc,
+    0 0 20px #ff33aa,
+    0 0 40px #ff33aa,
+    0 0 60px #ff33aa;
+  animation: neonFlicker 2.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%   { opacity: 1; text-shadow: 0 0 2px #ff66cc, 0 0 4px #ff33aa; }
+  2%   { opacity: 0.6; text-shadow: none; }
+  4%   { opacity: 1; text-shadow: 0 0 3px #ff66cc, 0 0 6px #ff33aa; }
+  10%  { opacity: 0.3; text-shadow: none; }
+  11%  { opacity: 1; text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff33aa; }
+  100% { opacity: 1; text-shadow: 0 0 10px #ff66cc, 0 0 30px #ff33aa, 0 0 50px #ff33aa; }
+}
+
+
     .stats {
       margin-top: 2rem;
       background: #ffe6f3;
@@ -214,13 +237,13 @@
 
   <div class="card">
     <img src="avatar.jpg" alt="Avatar" class="avatar">
-    <h1>macros</h1>
+    <h1 class="japanese-neon">macros</h1>
     <p>🌸 студент, 20 лет, немного кода и вайб 💌</p>
 
     <div class="links">
       <a href="https://t.me/Serejka_macros" target="_blank">📫 Telegram</a>
       <a href="https://github.com/serejka-macros" target="_blank">💻 GitHub</a>
-      <a href="https://steamcommunity.com/id/serejka_macros/" target="_blank">🎮 Steam</a>
+      <a href="https://steamcommunity.com/id/serejka_macros/" target="_blank">🔎 Steam</a>
       <a href="https://www.twitch.tv/serejkamacros" target="_blank">🎪 Twitch</a>
     </div>
 
