@@ -147,6 +147,23 @@
   font-weight: 600;
 }
 
+.stats {
+  margin-top: 2rem;
+  background: #ffe6f3;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  color: #333;
+  font-size: 0.95rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(255, 144, 232, 0.3);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.stats p {
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
 .music-button:hover {
   background: #f06292;
   transform: scale(1.05);
@@ -173,6 +190,29 @@
 </style>
 </head>
 <body>
+<script>
+  function animateValue(id, start, end, duration, stepSize = 1) {
+    const obj = document.getElementById(id);
+    let current = start;
+    const range = end - start;
+    const steps = Math.ceil(range / stepSize);
+    const stepTime = Math.max(10, Math.floor(duration / steps)); // не меньше 10мс для стабильности
+
+    const timer = setInterval(() => {
+      current += stepSize;
+      if (current >= end) {
+        current = end;
+        clearInterval(timer);
+      }
+      obj.textContent = current;
+    }, stepTime);
+  }
+
+  window.addEventListener("load", () => {
+    animateValue("projectCount", 0, 6, 600);         // быстрое появление 6 проектов
+    animateValue("codeLines", 0, 10000, 3000, 137);  // строки кода — по 137 строк за шаг, за 3 сек
+  });
+</script>
   <div class="card">
     <img src="avatar.jpg" alt="Avatar" class="avatar">
     <h1>macros</h1>
@@ -184,6 +224,11 @@
       <a href="https://steamcommunity.com/id/serejka_macros/" target="_blank">🎮 Steam</a>
       <a href="https://www.twitch.tv/serejkamacros" target="_blank">🎪 Twitch</a>
     </div>
+    <div class="stats">
+  <p>📁 <span id="projectCount">0</span>+ проектов</p>
+  <p>💻 <span id="codeLines">0</span>+ строк кода</p>
+  <p>🧠 Стек: JS, PHP, MySQL, Capacitor, HTML/CSS</p>
+ </div>
 
     <div class="projects">
   <h2>📌 Мои проекты:</h2>
