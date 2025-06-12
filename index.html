@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="favicon.gif" type="image/gif">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css">
   <title>🎴 macros — код и вайб 🌊</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -196,22 +197,47 @@
 }
 
 
-    .stats {
-      margin-top: 2rem;
-      background: #ffe6f3;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
-      color: #333;
-      font-size: 0.95rem;
-      text-align: left;
-      box-shadow: 0 4px 12px rgba(255, 144, 232, 0.3);
-      animation: fadeIn 1.2s ease-in-out;
-    }
+.stats {
+  background-color: #ffe6f0;
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 400px;
+}
 
-    .stats p {
-      margin: 0.3rem 0;
-      line-height: 1.4;
-    }
+.stat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.stat-item span:first-child {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.stack {
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tech {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.tech img {
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+
 
     .sakura {
       position: fixed;
@@ -250,8 +276,18 @@
     <div class="stats">
       <p>📁 <span id="projectCount">0</span>+ проектов</p>
       <p>💻 <span id="codeLines">0</span>+ строк кода</p>
-      <p>🧠 Стек: JS, PHP, MySQL, Python, Capacitor, HTML/CSS</p>
-    </div>
+      <p>
+  <div class="stat-item stack">
+    <span>🧠</span> Стек:&nbsp;
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" title="JavaScript" /></span>
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP" /></span>
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" /></span>
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" /></span>
+    <span class="tech">Capacitor</span>
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" /></span>
+    <span class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" /></span>
+  </div>
+</div>
 
     <div class="projects">
       <h2>📌 Мои проекты:</h2>
